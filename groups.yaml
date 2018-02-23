@@ -1,0 +1,57 @@
+# Groups (cards)
+nest:
+ name: Nest
+ entities:
+ - binary_sensor.living_room_thermostat_fan
+ - binary_sensor.living_room_thermostat_has_leaf
+ - binary_sensor.living_room_thermostat_is_locked
+ - binary_sensor.living_room_thermostat_is_using_emergency_heat
+ - binary_sensor.living_room_thermostat_online
+ - sensor.living_room_thermostat_hvac_state
+ - sensor.living_room_thermostat_operation_mode
+ - sensor.living_room_thermostat_target
+darksky:
+ name: DarkSky
+ entities:
+ - sensor.dark_sky_daily_summary
+ - sensor.dark_sky_hourly_summary
+ - sensor.dark_sky_icon
+ - sensor.dark_sky_nearest_storm_distance
+ - sensor.dark_sky_precip
+ - sensor.dark_sky_precip_intensity
+ - sensor.dark_sky_precip_probability
+ - sensor.dark_sky_summary
+pihole:
+ name: Pi-hole
+ entities:
+ - sensor.pihole_ads_blocked_today
+ - sensor.pihole_ads_percentage_blocked_today
+ - sensor.pihole_dns_queries_cached
+ - sensor.pihole_dns_queries_forwarded
+ - sensor.pihole_dns_queries_today
+ - sensor.pihole_dns_unique_clients
+ - sensor.pihole_dns_unique_domains
+ - sensor.pihole_domains_blocked
+hardware_stats:
+ name: Hardware Information
+ entities:
+ - sensor.load_15m
+ - sensor.load_1m
+ - sensor.load_5m
+ - sensor.processor_use
+ - sensor.memory_free
+ - sensor.disk_use_percent_home
+ - sensor.cpu_temperature
+kitchen_led_group:
+  name: "Kitchen LED Group"
+  entities:
+    - light.kitchen_strip
+    - input_number.kitchen_animation_speed
+
+# Views (tabs at the top)
+weather_tab:
+ view: yes
+ name: Weather
+ entities:
+ - group.darksky
+ - camera.michigan_radar

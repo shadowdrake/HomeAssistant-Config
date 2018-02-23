@@ -1,0 +1,24 @@
+discord_spam:
+    sequence:
+     - service: notify.discord
+       data:
+        message: "Hey <@217045881948602388> - it's time for Timmie Tendies!"
+        target: "139382473187393537"
+
+
+####################
+### NEST SCRIPTS ###
+####################
+# Set away, no structure specified so will execute for all
+set_nest_away:
+  sequence:
+    - service: nest.set_mode
+      data:
+        home_mode: away
+
+# Set home, no structure specified so will execute for all
+set_nest_home:
+  sequence:
+    - service: nest.set_mode
+      data:
+        home_mode: home
