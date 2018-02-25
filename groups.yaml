@@ -47,6 +47,13 @@ kitchen_led_group:
   entities:
     - light.kitchen_strip
     - input_number.kitchen_animation_speed
+garage_doors:
+  name: Garage Door
+  view: no
+  control: hidden
+  icon: mdi:garage
+  entities:
+    - cover.double
 
 # Views (tabs at the top)
 weather_tab:

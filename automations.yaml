@@ -133,3 +133,25 @@
     from: offline
     platform: state
     to: streaming
+
+# - alias: Weekly Backup at 3 AM
+  # trigger:
+    # platform: time
+    # at: '3:00:00'
+  # condition:
+  # - condition: time
+    # weekday:
+    # - mon
+  # action:
+  # - service: hassio.snapshot_full
+    # data_template:
+      # name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+  # - service: notify.slack_notify
+    # data_template:
+      # message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d')
+  # - delay: '02:00:00'
+  # - service: hassio.addon_stdin
+    # data_template:
+      # addon: 7be23ff5_dropbox_sync
+      # input:
+        # command: upload
